@@ -1,0 +1,4 @@
+[submodule "_posts/SuanFaKu"]
+	path = _posts/SuanFaKu
+	url = https://github.com/SuanFaKu/SuanFaKu.git
+	branch = master
