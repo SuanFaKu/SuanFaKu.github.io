@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }} | {{ site.subtitle | escape }}{% endif %}</title>
+  <style>
+    ::selection { background:#e66a02; color:#f8f9fa; text-shadow:0 0 transparent; }
+    a { text-decoration: none; opacity: .87; }
+    a[data-descr]:hover { position: relative; cursor: help; }
+    a[data-descr]::before { opacity: .54; content: "➟ "; }
+    a[data-descr]:hover::before { opacity: .38; }
+    a[data-descr]:hover::after {
+      opacity: .87;
+      content: attr(data-descr);
+      position: absolute;
+      left: 0;
+      top: 24px;
+      min-width: 200px;
+      border: 1px #aaaaaa solid;
+      border-radius: 10px;
+      background-color: #ffffcc;
+      padding: 12px;
+      color: #000000;
+      font-size: 14px;
+      z-index: 1;
+    }
+    .highlighter-rouge { padding: 0.718rem; opacity: .87; border: thin #aaaaaa solid; border-radius: 10px; background-color: beige; }
+    hr { opacity: .38; border:1px groove skyblue; }
+  </style></head>
+<body>
+  {{ content }}</body></html><!--{{ page.path }}-->{% if site.github %}<!--
+environment: {{ site.github.environment }}
+build_revision: {{ site.github.build_revision }}
+url: {{ site.github.url }}
+{% for item in site.github.versions %}{{ item[0] }} : {{ item[1] }}
+{% endfor %}-->{% endif %}

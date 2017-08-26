@@ -1,0 +1,4 @@
+---
+---
+
+{% for post in site.posts %}<a href="{{ post.url | relative_url }}" data-descr="{{ post.excerpt | strip_html }}">{{ post.title }}</a>{% endfor %}

@@ -1,0 +1,6 @@
+---
+layout: default
+---
+
+<h1>{{ page.title | escape }}</h1>{% if empty != page.tags %}<p>{{ page.tags | array_to_sentence_string }}</p>{% endif %}<hr />
+{{ content }}
